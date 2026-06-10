@@ -33,13 +33,27 @@ sysinfo.txt
 
 # Third-party/vendor assets excluded from the public repository
 Assets/Addons/
+Assets/Addons.meta
 Assets/Assets Packs/
+Assets/Assets Packs.meta
 Assets/Opsive/
+Assets/Opsive.meta
 Assets/Samples/
+Assets/Samples.meta
 Assets/Polybrush Data/
+Assets/Polybrush Data.meta
 Assets/ProBuilder Data/
+Assets/ProBuilder Data.meta
 Packages/com.opsive.shared/
 Packages/com.opsive.ultimatecharactercontroller/
+
+# Third-party package notes/links
+Assets/Help.pdf
+Assets/Help.pdf.meta
+Assets/More Assets.url
+Assets/More Assets.url.meta
+Assets/unity3d.txt
+Assets/unity3d.txt.meta
 
 # OS files
 .DS_Store
