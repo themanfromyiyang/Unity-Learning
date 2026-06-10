@@ -1,0 +1,47 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+
+# Visual Studio / Rider / VS Code local files
+.vs/
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+
+# Unity cache / generated metadata
+sysinfo.txt
+*.stackdump
+
+# Unity package exports kept outside source control
+*.unitypackage
+*.unitypackage.meta
+
+# Third-party/vendor assets excluded from the public repository
+Assets/Addons/
+Assets/Assets Packs/
+Assets/Opsive/
+Assets/Samples/
+Assets/Polybrush Data/
+Assets/ProBuilder Data/
+Packages/com.opsive.shared/
+Packages/com.opsive.ultimatecharactercontroller/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
