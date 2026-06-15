@@ -11,7 +11,9 @@ public class Mousemanager : MonoBehaviour
     public static Mousemanager instance;
     public Texture2D point, doorway, attack, target, arrow;
     RaycastHit hitInfo;
+
     public event Action<Vector3> OnMouseClicked;
+    public event Action<GameObject> OnEnemyClicked; 
     void Awake()
     {
         if (instance != null)
@@ -35,18 +37,10 @@ public class Mousemanager : MonoBehaviour
                 case "Ground":
                     Cursor.SetCursor(target, new Vector2(16,16), CursorMode.Auto);
                     break;
-                case "Doorway":
-                    Cursor.SetCursor(doorway, new Vector2(16,16), CursorMode.Auto);
-                    break;
                 case "Enemy":
                     Cursor.SetCursor(attack, new Vector2(16,16), CursorMode.Auto);
                     break;
-                case "Target":
-                    Cursor.SetCursor(target, new Vector2(16,16), CursorMode.Auto);
-                    break;
-                default:
-                    Cursor.SetCursor(arrow, new Vector2(16,16), CursorMode.Auto);
-                    break;
+               
             }
         }
     }
@@ -57,6 +51,10 @@ public class Mousemanager : MonoBehaviour
             if (hitInfo.collider.gameObject.tag == "Ground")
             {
                 OnMouseClicked?.Invoke(hitInfo.point);
+            }
+            if (hitInfo.collider.gameObject.tag == "Enemy")
+            {
+                OnEnemyClicked?.Invoke(hitInfo.collider.gameObject);
             }
         }
     }

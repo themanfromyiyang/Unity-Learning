@@ -17,7 +17,22 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        
+        SwitchStates();
+    }
+    
+    void SwitchStates()
+    {
+        switch(enemyStates)
+        {
+            case EnemyStates.GUARD:
+                break;
+            case EnemyStates.PATROL:
+                break;
+            case EnemyStates.CHASE:
+                break;
+            case EnemyStates.DEAD:
+                break;
+        }
     }
  
 }
