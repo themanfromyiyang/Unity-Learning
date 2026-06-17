@@ -52,13 +52,27 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator MoveToAttackTarget()
     {
-        agent.isStopped = false;
-        transform.LookAt(attackTarget.transform);
-
-        while(Vector3.Distance(transform.position, attackTarget.transform.position) > 1)
+        var target = attackTarget;
+        if (target == null)
         {
-            agent.destination = attackTarget.transform.position;
+            yield break;
+        }
+
+        var targetTransform = target.transform;
+        agent.isStopped = false;
+        transform.LookAt(targetTransform);
+        // TODO:修改攻击范围参数
+
+        while(target != null && (transform.position - targetTransform.position).sqrMagnitude > 1)
+        {
+            agent.destination = targetTransform.position;
             yield return null;
+        }
+
+        if (target == null)
+        {
+            agent.isStopped = true;
+            yield break;
         }
 
         agent.isStopped = true;

@@ -1,4 +1,5 @@
 {
   "dotnet.preferCSharpExtension": true,
-  "dotnet.defaultSolution": "努力、奋斗.sln"
+  "dotnet.defaultSolution": "努力、奋斗.sln",
+  "todo-tree.ripgrep.ripgrep": "D:\\Users\\Microsoft VS Code\\6928394f91\\resources\\app\\node_modules\\@vscode\\ripgrep-universal\\bin\\win32-x64\\rg.exe"
 }
